@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -A MST112171      # Specify the project account
+#SBATCH -A you_account      # Specify the project account
 #SBATCH -J ATACseq_mm39_Final # Specify the job name
 #SBATCH -p ct56          # Specify the partition
 #SBATCH -n 14             # Specify the total number of cores
@@ -14,8 +14,8 @@ set -o pipefail
 
 # === Global Parameters ===
 # --- User-defined paths ---
-proj_root="/work/j120885731/ATAC-seq" # Your ATAC-seq project root directory
-pkg_dir="/work/j120885731/CUTandTAG/CUTandTag_pkg" # Directory for reference data and packages
+proj_root="/work/you_account/ATAC-seq" # Your ATAC-seq project root directory
+pkg_dir="/work/you_account/CUTandTAG/CUTandTag_pkg" # Directory for reference data and packages
 raw_dir="$proj_root/ATAC"       # Directory for raw fastq files
 filelist="$proj_root/filelist.txt"   # Sample list file
 
